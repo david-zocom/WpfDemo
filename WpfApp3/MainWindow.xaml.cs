@@ -24,26 +24,10 @@ namespace WpfApp3
 		{
 			InitializeComponent();
 		}
-		public class Djur
-		{
-			public class Whatever {
-				public event Action WhateverEvent;
-			}
-			public Whatever w;
-			public event Action DjurEvent;
-		}
-		private Djur djur;
-		private event Action MainEvent;
-		private void Subscriber() { }
+		
 		private void Grid_Loaded(object sender, RoutedEventArgs e)
 		{
-			myListBox.SelectionChanged += MyListBox_SelectionChanged;
-			MainEvent += Subscriber;
-			djur.DjurEvent += Subscriber;
-			djur.w.WhateverEvent += Subscriber;
-			List<Action> actions = new List<Action>();
-			actions.Add(MainEvent);
-			actions.Add(djur.DjurEvent);
+			
 		}
 
 		private void MyListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
